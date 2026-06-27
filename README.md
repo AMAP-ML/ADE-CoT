@@ -20,8 +20,8 @@
 ### 1. Python environment
 
 ```bash
-git clone https://github.com/MorningStarOvO/ADE-COT.git
-cd ADE-COT
+git clone https://github.com/AMAP-ML/ADE-CoT.git
+cd ADE-CoT
 
 conda create -n ade-cot python=3.10 -y
 conda activate ade-cot
