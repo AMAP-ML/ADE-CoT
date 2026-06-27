@@ -1,0 +1,7 @@
+{
+    "examples/case1.png": {
+        "instruction": "Add a cherry eating action.",
+        "original_caption": "A character standing with empty hands.",
+        "edited_caption":   "A character eating a cherry."
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "python.analysis.extraPaths": [
+        "./edit_model/Step1X_Edit",
+        "./edit_model/FLUX_Kontext"
+    ],
+    "git.ignoreLimitWarning": true,
+    "cursorpyright.analysis.extraPaths": [
+        "./edit_model/Step1X_Edit",
+        "./edit_model/FLUX_Kontext"
+    ]
+}

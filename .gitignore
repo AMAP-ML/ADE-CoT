@@ -1,0 +1,39 @@
+# OS / IDE
+.DS_Store
+.idea/
+*.swp
+
+# VSCode / Cursor: only keep shared settings, ignore per-user files
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Build / packaging
+build/
+dist/
+*.egg
+
+# Local outputs / cached models
+output/
+outputs/
+runs/
+logs/
+*.log
+cache_model/
+ckpt/
+
+# Secrets (never commit these)
+.env
+.env.*
+keys/
+*.key
+secret.env
