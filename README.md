@@ -187,26 +187,12 @@ Original licenses of each sub-model are preserved under `edit_model/*/LICENSE`.
 If you find ADE-CoT useful, please cite our paper:
 
 ```bibtex
-@inproceedings{ADE_CoT,
-  title     = {From Scale to Speed: Adaptive Test-Time Scaling for Image Editing},
-  author    = {Xiangyan Qu and
-               Zhenlong Yuan and
-               Jing Tang and
-               Rui Chen and
-               Datao Tang and
-               Meng Yu and
-               Lei Sun and
-               Yancheng Bai and
-               Xiangxiang Chu and
-               Gaopeng Gou and
-               Gang Xiong and
-               Yujun Cai},
-  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-  year      = {2026},
-  url       = {https://arxiv.org/abs/2603.00141},
-  eprint    = {2603.00141},
-  archivePrefix = {arXiv},
-  primaryClass  = {cs.CV}
+@inproceedings{qu2026scale,
+  title={From scale to speed: Adaptive test-time scaling for image editing},
+  author={Qu, Xiangyan and Yuan, Zhenlong and Tang, Jing and Chen, Rui and Tang, Datao and Yu, Meng and Sun, Lei and Bai, Yancheng and Chu, Xiangxiang and Gou, Gaopeng and others},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={23272--23282},
+  year={2026}
 }
 ```
 
