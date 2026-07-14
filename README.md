@@ -1,8 +1,20 @@
 # ADE-CoT — From Scale to Speed: Adaptive Test-Time Scaling for Image Editing
 
-> Official demo implementation of **ADaptive Edit-CoT (ADE-CoT)**, an on-demand test-time-scaling framework for instruction-driven image editing (CVPR 2026 submission).
+<p align="center">
+  <a href="https://arxiv.org/abs/2603.00141"><img src="https://img.shields.io/badge/arXiv-2603.00141-b31b1b.svg" alt="arXiv"></a>
+  <img src="https://img.shields.io/badge/CVPR-2026-blue.svg" alt="CVPR 2026">
+</p>
+
+<p align="center">
+  <a href="https://arxiv.org/abs/2603.00141"><b>Paper</b></a> |
+  <a href="https://github.com/AMAP-ML/ADE-CoT"><b>Code</b></a>
+</p>
+
+> Official demo implementation of **ADaptive Edit-CoT (ADE-CoT)**, an on-demand test-time-scaling framework for instruction-driven image editing, accepted at **CVPR 2026**.
 >
 > ADE-CoT shifts the focus of Image-CoT from "scale" to "speed". Instead of paying a fixed Best-of-N cost on every edit, it (i) **dynamically allocates** the sampling budget to harder cases, (ii) **prunes early** with edit-specific verifiers, and (iii) **stops opportunistically** once enough intent-aligned results are obtained — yielding **> 2× speed-up over Best-of-N at comparable / better quality**.
+
+**News:** ADE-CoT has been accepted to CVPR 2026, and the official implementation is now open-sourced. 🎉
 
 <p align="center">
   <img src="assets/pipeline.png" width="100%" alt="ADE-CoT pipeline comparison of Image-CoT methods for editing">
@@ -107,6 +119,7 @@ torchrun --nproc_per_node=1 ADE_CoT_demo.py \
 ### Full ADE-CoT (all three strategies enabled)
 
 ```bash
+# Paper defaults: t_e=8 and t_l=16
 torchrun --nproc_per_node=1 ADE_CoT_demo.py \
     --input_json_dir   ./examples/demo.json \
     --output_dir       ./output \
@@ -114,8 +127,8 @@ torchrun --nproc_per_node=1 ADE_CoT_demo.py \
     --model_path       /path/to/FLUX.1-Kontext-dev \
     --num_samples      32 \
     --try_times        3 \
-    --num_early_steps  8        `# t_e in the paper`   \
-    --num_late_steps   16       `# t_l in the paper`   \
+    --num_early_steps  8 \
+    --num_late_steps  16 \
     --early_stop_strategy        adaptive_TTS_nums-early_prune_rank-adaptive_stop \
     --prune_score_way            vie-caption-region \
     --retain_score_way           vie-caption-region \
@@ -171,7 +184,7 @@ Original licenses of each sub-model are preserved under `edit_model/*/LICENSE`.
 
 ## 📜 Citation
 
-If you find ADE-CoT useful, please cite our CVPR submission:
+If you find ADE-CoT useful, please cite our paper:
 
 ```bibtex
 @inproceedings{ADE_CoT,
@@ -189,7 +202,11 @@ If you find ADE-CoT useful, please cite our CVPR submission:
                Gang Xiong and
                Yujun Cai},
   booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-  year      = {2026}
+  year      = {2026},
+  url       = {https://arxiv.org/abs/2603.00141},
+  eprint    = {2603.00141},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV}
 }
 ```
 
